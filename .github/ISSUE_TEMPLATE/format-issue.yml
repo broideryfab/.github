@@ -1,0 +1,28 @@
+name: Format issue
+description: A file is parsed incorrectly, or a format/version is missing
+labels: ["format"]
+body:
+  - type: input
+    id: format
+    attributes:
+      label: Format and version
+      placeholder: e.g. PES v6, DST, JEF
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Created by (software or machine)
+      placeholder: e.g. Wilcom EmbroideryStudio e4.5, Brother PE-Design 11
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened vs. what you expected
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Sample file
+      options:
+        - label: If I attached a sample file, I have the right to share it publicly.
